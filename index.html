@@ -190,6 +190,17 @@
                     break;
                 case 14:
                     swal({
+                        title: "",
+                        text: "Alfira Martadiningsih ❤️😘",
+                        button: "Lanjut",
+                        className: "fade-in"
+                    }).then(function () {
+                        step++;
+                        showSweetAlert();
+                    });
+                    break;
+                case 15:
+                    swal({
                         title: "Makasih sayang 😘",
                         text: "Kamu sekarang ini udah sampe slide terakhir, Semoga kita selalu bisa bersama bahagia sampe akhir.",
                         button: "Tutup",
@@ -208,7 +219,7 @@
 
         // Menghentikan SweetAlert setelah langkah ke-14
         $("body").on("click", ".swal-button", function () {
-            if (step == 15) {
+            if (step == 16) {
                 $('#firework').remove();
                 window.close();
                 swal.close(); // Menutup SweetAlert
