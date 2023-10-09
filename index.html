@@ -136,7 +136,7 @@
                 case 9:
                     swal({
                         title: "",
-                        text: "Semoga selalu bisa sama sama sampe tahun depan nikah terus sama sama sampe tahun depan-depan dan seterusnya terus sampe surga bareng2 💞🥺",
+                        text: "Semoga selalu bisa sama-sama sampe nikah dan seterusnya terus sampe surga bareng2 💞🥺",
                         button: "Lanjut",
                         className: "fade-in"
                     }).then(function () {
@@ -169,7 +169,7 @@
                 case 12:
                     swal({
                         title: "",
-                        text: "Selalu saling terbuka ya kalo ada yg salah biag gak ada salah paham",
+                        text: "Selalu saling terbuka ya kalo ada yg salah biar gak ada salah paham",
                         button: "Lanjut",
                         className: "fade-in"
                     }).then(function () {
@@ -185,6 +185,7 @@
                         className: "fade-in"
                     }).then(function () {
                         step++;
+                        showSweetAlert();
                     });
                     break;
                 case 14:
@@ -192,7 +193,9 @@
                         title: "Makasih sayang 😘",
                         text: "Kamu sekarang ini udah sampe slide terakhir, Semoga kita selalu bisa bersama bahagia sampe akhir.",
                         button: "Tutup",
-                        className: "fade-in"
+                        className: "fade-in",
+                      }).then(function () {
+                        step++;
                     });
                     break;
             }
@@ -205,7 +208,7 @@
 
         // Menghentikan SweetAlert setelah langkah ke-14
         $("body").on("click", ".swal-button", function () {
-            if (step == 14) {
+            if (step == 15) {
                 $('#firework').remove();
                 window.close();
                 swal.close(); // Menutup SweetAlert
